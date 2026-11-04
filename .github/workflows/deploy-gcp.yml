@@ -7,7 +7,7 @@ on:
       - 'app/**'
       - 'terf/environment/gcp/**'
       - '.github/workflows/deploy-gcp.yml'
-      - 'Dockerfile.gcp'                           # # 讀取 GCP 專用 Dockerfile
+      - 'Dockerfile.gcp'                           # get GCP Dockerfile
       - 'requirements.txt'
   pull_request:
     branches: [ main ]
@@ -22,8 +22,7 @@ on:
 env:
   GCP_REGION: asia-east1
   GAR_REPOSITORY: my-app-repo
-  SERVICE_NAME: my-app-service                 # 🎯 修正：對齊目前已綁定網域的 Cloud Run 服務名稱
-
+  SERVICE_NAME: my-app-service     # Align the Cloud Run service names with the currently bound domains.
 jobs:
   test:
     runs-on: ubuntu-latest

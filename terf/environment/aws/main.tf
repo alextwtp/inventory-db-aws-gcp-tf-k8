@@ -21,7 +21,7 @@ module "alb" {
   ]
 }
 
-# 3. RDS Security Group
+# 4. RDS Security Group
 resource "aws_security_group" "rds_sg" {
   name        = "rds-security-group"
   description = "Allow inbound traffic for RDS"
